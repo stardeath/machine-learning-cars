@@ -54,10 +54,11 @@ class AI():
         #    print("================================================================")               
         #    print(i)
         self.model.set_weights(weights)
+
 if __name__ == "__main__":
     x=AI()
     x.createNeuralNet()
     distances=list(range(5))
-    x.predict(disatnces)
+    x.predict(distances)
 
 
