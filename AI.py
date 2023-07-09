@@ -11,12 +11,12 @@ class AI():
     def createNeuralNet(self,hiddenLayers=[4]):
         """Create Neural Net-#of Inputs=# of distances and 3 outputs matching ARROW_LEFT ARROW_UP ARROW_RIGHT"""
         model = Sequential()
-        model.add(Dense(5, activation='relu', input_shape=(5,),bias=False ))
+        model.add(Dense(5, activation='relu', input_shape=(5,),use_bias=False ))
 
         for i in hiddenLayers:
-            model.add(Dense(i, activation='relu',bias=False))
+            model.add(Dense(i, activation='relu',use_bias=False))
         
-        model.add(Dense(3, activation='sigmoid',bias=False))
+        model.add(Dense(3, activation='sigmoid',use_bias=False))
         model.compile(optimizer='adam', loss='categorical_crossentropy')
         self.model=model
            
